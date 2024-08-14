@@ -7,7 +7,7 @@ export const useSocket=()=>{
     return socket
 }
 function SocketProvider({ children }) {
-    const socket =useMemo(()=>io("localhost:8001"),[])
+    const socket =useMemo(()=>io("/server"),[])
 
     return (
         <myContext.Provider value={{socket}}>
