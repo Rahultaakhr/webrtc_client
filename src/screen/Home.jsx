@@ -14,6 +14,8 @@ function Home() {
     }, [socket,userDetails])
 
     const handleJoinRoom=useCallback(({email,room})=>{
+        console.log("hello");
+        
         navigation(`/room/${room}`)
     },[])
     useEffect(()=>{

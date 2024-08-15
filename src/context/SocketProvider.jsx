@@ -7,7 +7,7 @@ export const useSocket=()=>{
     return socket
 }
 function SocketProvider({ children }) {
-    const socket =useMemo(()=>io("/server"),[])
+    const socket =useMemo(()=>io("https://webrtc-server-17o3.onrender.com"),[])
 
     return (
         <myContext.Provider value={{socket}}>
